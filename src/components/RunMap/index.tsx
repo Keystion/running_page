@@ -252,7 +252,9 @@ const RunMap = ({
     (ref: MapRef) => {
       if (ref !== null) {
         const map = ref.getMap();
-        if (map && IS_CHINESE) {
+        // MapboxLanguage 仅支持 Mapbox 官方的 vector v8 style;
+        // 用 mapcn/maptiler 等其它厂商的 style 时套用会抛错,故仅在 mapbox 厂商下启用。
+        if (map && IS_CHINESE && MAP_TILE_VENDOR === 'mapbox') {
           map.addControl(new MapboxLanguage({ defaultLanguage: 'zh-Hans' }));
         }
         // all style resources have been downloaded
