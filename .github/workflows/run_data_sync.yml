@@ -123,11 +123,12 @@ jobs:
         run: |
           python run_page/nike_to_strava_sync.py ${{ secrets.NIKE_REFRESH_TOKEN }} ${{ secrets.STRAVA_CLIENT_ID }} ${{ secrets.STRAVA_CLIENT_SECRET }} ${{ secrets.STRAVA_CLIENT_REFRESH_TOKEN }}
 
-      - name: Run sync Keep + Codoon(咕咚) script
+      - name: Run sync Keep script
         if: env.RUN_TYPE == 'keep'
         run: |
           python run_page/keep_sync.py ${{ secrets.KEEP_MOBILE }} ${{ secrets.KEEP_PASSWORD }} --with-gpx
-          python run_page/codoon_sync.py ${{ secrets.CODOON_MOBILE }} ${{ secrets.CODOON_PASSWORD }} --with-gpx
+          # 咕咚(codoon)已不再使用:历史数据通过本地 GPX 备份一次性导入并提交到仓库,
+          # 故此处不再同步,避免咕咚风控导致每日 Keep 同步整体失败。
 
       - name: Run sync Coros script
         if: env.RUN_TYPE == 'coros'
