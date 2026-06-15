@@ -1,8 +1,10 @@
 // Constants
+// 优先使用环境变量 VITE_MAPBOX_TOKEN(在 Cloudflare Pages 的构建环境变量里配置自己的 token,
+// 并在 Mapbox 后台对 token 加 URL 限制:https://workouts.webclown.net)。
+// 未设置时回退到 running_page 作者的公开 token(仅用于本地临时跑通,生产请务必替换)。
+// 参考:https://github.com/yihong0618/running_page/issues/643#issuecomment-2042668580
 const MAPBOX_TOKEN =
-  // For security reasons, please avoid using the default public token provided by Mapbox as much as possible.
-  // Instead, manually add a new token and apply URL restrictions.
-  // (please refer to https://github.com/yihong0618/running_page/issues/643#issuecomment-2042668580)
+  import.meta.env.VITE_MAPBOX_TOKEN ||
   'pk.eyJ1IjoieWlob25nMDYxOCIsImEiOiJjbWYxdXR4YncwMTJtMm5zOTE4eTZpMGdtIn0.OnsXdwkZFztR8a5Ph_T-xg';
 const MUNICIPALITY_CITIES_ARR = [
   '北京市',
