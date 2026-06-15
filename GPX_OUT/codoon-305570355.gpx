@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <trk>
+    <name>gpx from codoon</name>
+    <trkseg>
+      <trkpt lat="39.8878447" lon="116.4061475">
+        <ele>42.73303</ele>
+        <time>2019-07-09T15:15:57.996000Z</time>
+      </trkpt>
+      <trkpt lat="39.8869435" lon="116.4047616">
+        <ele>42.519</ele>
+        <time>2019-07-09T15:17:34.992000Z</time>
+      </trkpt>
+      <trkpt lat="39.8869513" lon="116.404636">
+        <ele>42.82023</ele>
+        <time>2019-07-09T15:17:37.992000Z</time>
+      </trkpt>
+      <trkpt lat="39.8869477" lon="116.4045026">
+        <ele>42.8995</ele>
+        <time>2019-07-09T15:17:40.992000Z</time>
+      </trkpt>
+      <trkpt lat="39.8869599" lon="116.404341">
+        <ele>42.94706</ele>
+        <time>2019-07-09T15:17:43.992000Z</time>
+      </trkpt>
+      <trkpt lat="39.8345348" lon="116.3958167">
+        <ele>41.66289</ele>
+        <time>2019-07-09T15:52:57.402000Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
