@@ -29,8 +29,8 @@ env:
   RUN_TYPE: keep # 'keep' 步骤已被本仓库改造为顺序同步 Keep + 咕咚(codoon),两者写入同一个 data.db。support strava/nike/garmin/coros/garmin_cn/garmin_sync_cn_global/keep/only_gpx/only_fit/nike_to_strava/strava_to_garmin/tcx_to_garmin/strava_to_garmin_cn/garmin_to_strava/garmin_to_strava_cn/oppo/intervals_icu/db_updater
   ATHLETE: Keystion
   TITLE: Keystion Running
-  MIN_GRID_DISTANCE: 10 # change min distance here
-  TITLE_GRID: Over 10km Runs # also here
+  MIN_GRID_DISTANCE: 3 # change min distance here
+  TITLE_GRID: 超过3公里的运动轨迹 # also here
 
   # IGNORE_BEFORE_SAVING: True # if you want to ignore some data before saving, set this to True
   IGNORE_START_END_RANGE: 10 # Unit meter
@@ -43,7 +43,7 @@ env:
   BUILD_GH_PAGES: false # 使用 Cloudflare Pages 部署,无需 GitHub Pages,设为 false
   SAVE_TO_PARQENT: false # If you want to save the data to the repo, set it to `true`
   GENERATE_MONTH_OF_LIFE: false # 需要「生命之月」图时设为 true,并在下方填写真实生日月份
-  BIRTHDAY_MONTH: 1989-03 # If you want to generate the month of life, set it to your birthday month, format is YYYY-MM
+  BIRTHDAY_MONTH: 1990-07 # If you want to generate the month of life, set it to your birthday month, format is YYYY-MM
 
 jobs:
   sync:

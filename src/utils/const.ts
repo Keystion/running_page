@@ -54,32 +54,38 @@ const IS_CHINESE = true;
 const USE_ANIMATION_FOR_GRID = false;
 const CHINESE_INFO_MESSAGE = (yearLength: number, year: string): string => {
   const yearStr = year === 'Total' ? '所有' : ` ${year} `;
-  return `记录自己跑步 ${yearLength} 年了，下面列表展示的是${yearStr}的数据`;
+  return `这里记录了我所有的锻炼，锻炼能让我更健康，运动能带来快乐，享受运动之后的酣畅淋漓。我用 App 记录自己锻炼 ${yearLength} 年了，下面列表展示的是${yearStr}的数据：`;
 };
 const ENGLISH_INFO_MESSAGE = (yearLength: number, year: string): string =>
-  `Running Journey with ${yearLength} Years, the table shows year ${year} data`;
+  `Here is a record of all my exercises. Exercise can make me healthier, exercise can bring happiness, and I can enjoy the full flow after exercise. Running Journey with ${yearLength} Years, the table shows year ${year} data`;
 
 // English is not supported for location info messages yet
 const CHINESE_LOCATION_INFO_MESSAGE_FIRST =
   '跑过了一些地方，希望随着时间推移，点亮的地方越来越多';
 const CHINESE_LOCATION_INFO_MESSAGE_SECOND = '不要停下来，不要停下奔跑的脚步';
 
+export const RUN_TEXT = '🏃 跑步';
+export const RIDE_TEXT = '🚴 骑行';
+export const HIKE_TEXT = '🚶 徒步';
+export const SKIING_TEXT = '🏂 滑雪';
+export const SWIM_TEXT = '🏊 游泳';
+
 const INFO_MESSAGE = IS_CHINESE ? CHINESE_INFO_MESSAGE : ENGLISH_INFO_MESSAGE;
-const FULL_MARATHON_RUN_TITLE = IS_CHINESE ? '全程马拉松' : 'Full Marathon';
-const HALF_MARATHON_RUN_TITLE = IS_CHINESE ? '半程马拉松' : 'Half Marathon';
-const MORNING_RUN_TITLE = IS_CHINESE ? '清晨跑步' : 'Morning Run';
-const MIDDAY_RUN_TITLE = IS_CHINESE ? '午间跑步' : 'Midday Run';
-const AFTERNOON_RUN_TITLE = IS_CHINESE ? '午后跑步' : 'Afternoon Run';
-const EVENING_RUN_TITLE = IS_CHINESE ? '傍晚跑步' : 'Evening Run';
-const NIGHT_RUN_TITLE = IS_CHINESE ? '夜晚跑步' : 'Night Run';
-const RUN_GENERIC_TITLE = IS_CHINESE ? '跑步' : 'Run';
-const RUN_TRAIL_TITLE = IS_CHINESE ? '越野跑' : 'Trail Run';
-const RUN_TREADMILL_TITLE = IS_CHINESE ? '跑步机' : 'Treadmill Run';
-const HIKING_TITLE = IS_CHINESE ? '徒步' : 'Hiking';
-const CYCLING_TITLE = IS_CHINESE ? '骑行' : 'Cycling';
-const SKIING_TITLE = IS_CHINESE ? '滑雪' : 'Skiing';
-const WALKING_TITLE = IS_CHINESE ? '步行' : 'Walking';
-const SWIMMING_TITLE = IS_CHINESE ? '游泳' : 'Swimming';
+const FULL_MARATHON_RUN_TITLE = IS_CHINESE ? `${RUN_TEXT}（全程马拉松）` : 'Full Marathon';
+const HALF_MARATHON_RUN_TITLE = IS_CHINESE ? `${RUN_TEXT}（半程马拉松）` : 'Half Marathon';
+const MORNING_RUN_TITLE = IS_CHINESE ? `${RUN_TEXT}（清晨）` : 'Morning Run';
+const MIDDAY_RUN_TITLE = IS_CHINESE ? `${RUN_TEXT}（午间）` : 'Midday Run';
+const AFTERNOON_RUN_TITLE = IS_CHINESE ? `${RUN_TEXT}（午后）` : 'Afternoon Run';
+const EVENING_RUN_TITLE = IS_CHINESE ? `${RUN_TEXT}（傍晚）` : 'Evening Run';
+const NIGHT_RUN_TITLE = IS_CHINESE ? `${RUN_TEXT}（夜晚）` : 'Night Run';
+const RUN_GENERIC_TITLE = IS_CHINESE ? `${RUN_TEXT}（日常）` : 'Run';
+const RUN_TRAIL_TITLE = IS_CHINESE ? `${RUN_TEXT}（越野）` : 'Trail Run';
+const RUN_TREADMILL_TITLE = IS_CHINESE ? `${RUN_TEXT}（跑步机）` : 'Treadmill Run';
+const HIKING_TITLE = IS_CHINESE ? `${HIKE_TEXT}（日常）` : 'Hiking';
+const CYCLING_TITLE = IS_CHINESE ? `${RIDE_TEXT}（日常）` : 'Cycling';
+const SKIING_TITLE = IS_CHINESE ? `${SKIING_TEXT}（日常）` : 'Skiing';
+const WALKING_TITLE = IS_CHINESE ? `${HIKE_TEXT}（日常）` : 'Walking';
+const SWIMMING_TITLE = IS_CHINESE ? `${SWIM_TEXT}（日常）` : 'Swimming';
 const ALL_TITLE = IS_CHINESE ? '所有' : 'All';
 const ACTIVITY_COUNT_TITLE = IS_CHINESE ? '活动次数' : 'Activity Count';
 const MAX_DISTANCE_TITLE = IS_CHINESE ? '最远距离' : 'Max Distance';

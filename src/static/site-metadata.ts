@@ -17,8 +17,8 @@ const getBasePath = () => {
 const data: ISiteMetadataResult = {
   siteTitle: 'Workouts',
   siteUrl: 'https://workouts.webclown.net',
-  logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
-  description: 'My running & workout activities',
+  logo: 'https://images.webclown.net/logo.png',
+  description: '我的跑步和锻炼活动',
   navLinks: [
     {
       name: 'Summary',
