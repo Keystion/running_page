@@ -149,8 +149,8 @@ const YearStat = ({
   return (
     <div className="cursor-pointer" onClick={() => onClick(year)}>
       <section {...eventHandlers}>
-        <Stat value={year} description=" Journey" />
-        <Stat value={summary.runCount} description=" Runs" />
+        <Stat value={year} description=" 历程" />
+        <Stat value={summary.runCount} description=" 训练" />
         <Stat value={summary.totalDistance} description={` ${DIST_UNIT}`} />
         {SHOW_ELEVATION_GAIN && (
           <Stat
@@ -158,12 +158,12 @@ const YearStat = ({
             description=" Elevation Gain"
           />
         )}
-        <Stat value={summary.averagePace} description=" Avg Pace" />
-        <Stat value={`${summary.streak} day`} description=" Streak" />
+        <Stat value={summary.averagePace} description=" 平均配速" />
+        <Stat value={`${summary.streak} 天`} description=" 连续打卡" />
         {summary.hasHeartRate && (
           <Stat
             value={summary.averageHeartRate}
-            description=" Avg Heart Rate"
+            description=" 平均心率"
           />
         )}
       </section>
