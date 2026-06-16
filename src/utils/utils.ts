@@ -206,11 +206,11 @@ const getActivitySport = (act: Activity): string => {
     else if (act.subtype === 'treadmill')
       return ACTIVITY_TYPES.RUN_TREADMILL_TITLE;
     else return ACTIVITY_TYPES.RUN_GENERIC_TITLE;
-  } else if (act.type === 'hiking') {
+  } else if (act.type === 'hiking' || act.type === 'Hike') {
     return ACTIVITY_TYPES.HIKING_TITLE;
-  } else if (act.type === 'cycling') {
+  } else if (act.type === 'cycling' || act.type === 'Ride') {
     return ACTIVITY_TYPES.CYCLING_TITLE;
-  } else if (act.type === 'walking') {
+  } else if (act.type === 'walking' || act.type === 'Walk') {
     return ACTIVITY_TYPES.WALKING_TITLE;
   }
   // if act.type contains 'skiing'
@@ -232,6 +232,11 @@ const titleForRun = (run: Activity): string => {
     if (city && city.length > 0 && activity_sport.length > 0) {
       return `${city} ${activity_sport}`;
     }
+  }
+  // 非跑步类型(骑行/走路/徒步/滑雪)按运动类型命名,否则下面会把所有活动都标成「跑步」
+  if (run.type !== 'Run' && run.type !== 'running') {
+    const sport = getActivitySport(run);
+    if (sport) return sport;
   }
   // 3. use time+length if location or type is not available
   const runDistance = run.distance / 1000;
